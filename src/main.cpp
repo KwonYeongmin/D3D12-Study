@@ -1,19 +1,22 @@
 ﻿#include <iostream>
 
 #include <Support/WinInclude.h>
+#include <Support/Compointer.h>
+#include <Debug/DXDebugLayer.h>
 
 using namespace std;
 
 int main()
 {
+	// Debug Layer 초기화
+	DXDebugLayer::Get().Init();
 
-    IUnknown* p;
-    // 함수 주소, 쿼리 인터페이스, 릴리즈
-    p->Release();
+	ComPointer<ID3D12Device10> device;
+	D3D12CreateDevice(nullptr, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(&device));
 
-    POINT pt;
-    GetCursorPos(&pt);
-    cout << "The cursor is x : " << pt.x << " y : " << pt.y;
+
+	// 
+	DXDebugLayer::Get().Shutdown();
 }
 
 

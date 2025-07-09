@@ -16,15 +16,36 @@
     <Filter Include="Support">
       <UniqueIdentifier>{a02c4cd9-067b-4723-98c0-f7d3c9f59a10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{fa6f4725-3434-4d40-b1f8-32a7b1917e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D3D">
+      <UniqueIdentifier>{933a9aad-805c-4ac1-be9f-1823ed5d0b19}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Debug\DXDebugLayer.cpp">
+      <Filter>Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D\DXContext.cpp">
+      <Filter>D3D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Support\WinInclude.h">
       <Filter>Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Support\ComPointer.h">
+      <Filter>Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\DXDebugLayer.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D\DXContext.h">
+      <Filter>D3D</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
