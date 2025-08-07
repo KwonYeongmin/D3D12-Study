@@ -33,6 +33,9 @@
     <ClCompile Include="D3D\DXContext.cpp">
       <Filter>D3D</Filter>
     </ClCompile>
+    <ClCompile Include="Support\Window.cpp">
+      <Filter>Support</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Support\WinInclude.h">
@@ -46,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="D3D\DXContext.h">
       <Filter>D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Support\Window.h">
+      <Filter>Support</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

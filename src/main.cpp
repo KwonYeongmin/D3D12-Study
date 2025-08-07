@@ -2,21 +2,37 @@
 
 #include <Support/WinInclude.h>
 #include <Support/Compointer.h>
+#include <Support/Window.h>
+
 #include <Debug/DXDebugLayer.h>
+#include <D3D/DXContext.h>
 
 using namespace std;
 
 int main()
 {
-	// Debug Layer 초기화
 	DXDebugLayer::Get().Init();
 
-	ComPointer<ID3D12Device10> device;
-	D3D12CreateDevice(nullptr, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(&device));
+	if (DXContext::Get().Init() && DXWindow::Get().Init())
+	{
+		while (!DXWindow::Get().ShouldClose())
+		{
+			DXWindow::Get().Update();
+			auto* cmdList = DXContext::Get().InitCommandList();
+
+			// a lot of setup
+			// a draw
 
 
-	// 
+			DXContext::Get().ExecuteCommandList();
+
+			// Show me the stuff
+		}
+		DXWindow::Get().Shutdown();
+		DXContext::Get().Shutdown();
+	}
 	DXDebugLayer::Get().Shutdown();
+
 }
 
 
