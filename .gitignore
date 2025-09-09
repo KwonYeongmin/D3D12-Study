@@ -1,0 +1,26 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.opendb
+*.ipch
+
+# 빌드 결과
+Build/
+Debug/
+Release/
+*.obj
+*.pdb
+*.exe
+*.ilk
+*.log
+*.tlog
+*.cache
+*.idb
+
+# 기타
+*.sdf
+*.aps
+*.ncb
+*.tmp
